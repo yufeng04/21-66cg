@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="utf-8">
+	<title>12/66重构</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="2166.css">
+	<!-- 保证favicon访问 -->
+	<link rel="shortcut icon" href="path/to/faricon.ico">
+	<!-- 启用IE Edage模式 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+</head>
+
+<body>
+<header>
+ <!-- 导航菜单 -->      
+<nav>
+<!-- logo图片 -->
+      
+<ul id="nav">
+    <img src="images/12662.png" class="logo">   
+	<li class="nav-li-first"><a href="#">ABOUT</a>
+        <ul class="subs">
+        	<li><a href="#">submenu1.1</a></li>
+        	<li><a href="#">submenu1.2</a></li>
+        	<li><a href="#">submenu1.3</a></li>
+        </ul>
+	</li>
+
+	<li><a href="#">SUPPORT</a>
+        <ul class="subs">
+        	<li><a href="#">submenu2.1</a></li>
+        	<li><a href="#">submenu2.2</a></li>
+        	<li><a href="#">submenu2.3</a></li>
+        </ul>
+	</li>
+
+	<li><a href="#">PRODUCT</a>
+        <ul class="subs">
+        	<li><a href="#">submenu3.1</a></li>
+        	<li><a href="#">submenu3.2</a></li>
+        	<li><a href="#">submenu3.3</a></li>
+        </ul>
+	</li>
+	<li><a href="#">HOME</a></li>
+</ul>
+</nav>
+    	
+<!-- banner -->
+<div class="banner">
+    <div class="banner-left">
+        <p class="first-word word">HELLO</p>
+    	<p class="first-word word">WORLD</p>
+    	<p class="third-word word">PRODUCT</p>
+    </div>
+    <img src="images/1266banner.jpg" class="banner-right">
+</div>
+</header>
+
+<!-- 主题部分 -->
+<main class="content">
+<!-- one two three 模块 -->
+<div class="three-modules">
+	<div class="module">
+		<img src="images/12_66_4.jpg" class="module-img">
+		<p class="title">One</p>
+		<p class="sub-title">Level 2</p>
+		<span class="module-text">Some Text Some Text Some Text Some Text Some Text</span>
+	</div>
+	<div class="module">
+		<img src="images/12_66_5.jpg" class="module-img">
+		<p class="title">Two</p>
+		<p class="sub-title">Level 2</p>
+		<span class="module-text">Some Text Some Text Some Text Some Text Some Text</span>
+	</div>
+	<div class="module">
+		<img src="images/12_66_6.jpg" class="module-img">
+		<p class="title">Three</p>
+		<p class="sub-title">Level 2</p>
+		<span class="module-text">Some Text Some Text Some Text Some Text Some Text</span>
+	</div>
+</div>
+
+<!-- 轮播方式选择
+<select id="carousel-select" onchange="changeStyle(this)">
+    <option disabled selected>请选择轮播方式</option>
+    <option value="slide">Slide</option>
+    <option value="fade">Fade</option>
+</select> -->
+
+	<!-- 轮播 -->
+<div id="container">
+        <div id="list">
+            <img src="images/wanxia2.jpg" alt="3" />
+            <img src="images/12_66_7.jpg" alt="1" />
+            <img src="images/wanxia1.jpg" alt="2" />
+            <img src="images/wanxia2.jpg" alt="3" />
+            <img src="images/12_66_7.jpg" alt="1" />
+        </div>
+        <div id="buttons">
+            <span index="1" class="on"></span>
+            <span index="2"></span>
+            <span index="3"></span>
+        </div>
+        <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+        <a href="javascript:;" id="next" class="arrow">&gt;</a>
+    </div>
+
+
+<div class="box">
+ <!-- tab栏 -->
+   <div id="tab">
+   	     <ul>
+   	     	<li class="cur">TABONE</li>
+   	     	<li>TABTWO</li>
+   	     	<li>TABTRE</li>
+   	     	<li>TABFOR</li>
+   	     </ul>
+   </div>
+	<!-- 内容部分 -->
+	<div id="con">
+		<div class="con">
+		     <span>TABONE some text some text some text some text</span>
+		</div>
+
+		<div class="con">
+		     <span>TABTWO some text some text some text some text</span>
+		</div>
+
+		<div class="con">
+		     <span>TABTRE some text some text some text some text<span>
+		</div>
+
+		<div class="con">
+		     <span>TABFOR some text some text some text some text</span>
+		</div>
+	</div>
+</div>
+
+<!-- 表格部分 -->
+<table class="table">
+    <!-- 表格标题 -->
+    <caption>Table Caption</caption>
+    <!-- 表头 -->
+	<thead>
+		<tr>
+			<th></th>
+			<th>Free Version</th>
+			<th>Personal Version</th>
+			<th>Company Version</th>
+		</tr>
+	</thead>
+	<!-- 表格正文 -->
+	<tbody>
+		<tr>
+			<th>Feature A</th>
+			<td>Some Text Some Text Some Text</td>
+			<td>Some Text Some Text Some Text</td>
+			<td>Some Text Some Text Some Text</td>
+		</tr>
+		<tr>
+			<th>Feature B</th>
+			<td>Some Text Some Text Some Text</td>
+			<td>Some Text Some Text Some Text</td>
+			<td>Some Text Some Text Some Text</td>
+		</tr>
+		<tr>
+			<th>Feature C</th>
+			<td>Some Text Some Text Some Text</td>
+			<td>Some Text Some Text Some Text</td>
+			<td>Some Text Some Text Some Text</td>
+		</tr>
+		<tr>
+			<th>Feature D</th>
+			<td>Some Text Some Text Some Text</td>
+			<td>Some Text Some Text Some Text</td>
+			<td>Some Text Some Text Some Text</td>
+		</tr>
+		<tr>
+			<th>Price</th>
+			<td class="green">Free</td>
+			<td class="blue">$9.99/<sup>mo</sup></td>
+			<td class="red">$99.99<sup>mo</sup></td>
+		</tr>
+	</tbody>
+</table>
+
+    	<!-- 底部用户信息收集及banner -->
+	<div class="bottom-banner">
+		<div class="bb-left">
+			<p><select class="droplist" class='country' id='country' onchange='changeCity()'>
+				<option>Select your country</option>
+			</select></p>
+			<p><select class="droplist" class='city' id='city' onchange='changeCity()'>
+				<option>Select your country</option>
+			</select></p>
+			<p><input type="email" placeholder="input your email address" class="input-email">
+			<button value="Submit" class="submit-button">Submit</button></p>
+		</div>
+
+		<img src="images/12_66_10.jpg" class="shakehand" alt="握手" class="bb-right">
+	</div>
+</main>
+
+<footer>
+	<p class="copyright">&copy; 2017 IFE</p>
+</footer>
+</body>
+
+<!-- <script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script> -->
+<script src="2166.js"></script>
+</html>
